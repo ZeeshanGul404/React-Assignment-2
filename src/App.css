@@ -1,0 +1,107 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #171717;
+  background: #fff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.directory {
+  width: min(100% - 40px, 1100px);
+  margin: 18px auto 40px;
+}
+
+.directory-title {
+  margin: 0 0 52px;
+  padding: 22px 16px;
+  border-radius: 12px;
+  background: #19222e;
+  color: #9cb1df;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  text-align: center;
+}
+
+.student-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 36px 28px;
+  padding: 0 8px;
+}
+
+.student-card {
+  overflow: hidden;
+  border: 14px solid #c9c9c9;
+  border-radius: 1px;
+  background: #fff;
+}
+
+.student-card h2 {
+  margin: 0;
+  padding: 12px 30px 12px;
+  background: #e6effd;
+  font-size: 1.8rem;
+  line-height: 1.2;
+}
+
+.student-details {
+  display: grid;
+  gap: 11px;
+  margin: 0;
+  padding: 10px 30px 26px;
+  font-size: 1.35rem;
+}
+
+.student-details div {
+  display: flex;
+  gap: 10px;
+}
+
+.student-details dt {
+  color: #555;
+  font-weight: 700;
+}
+
+.student-details dd {
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .directory {
+    width: min(100% - 28px, 480px);
+    margin-top: 14px;
+  }
+
+  .directory-title {
+    margin-bottom: 28px;
+    padding: 18px 12px;
+  }
+
+  .student-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0;
+  }
+
+  .student-card h2 {
+    padding: 14px 20px 10px;
+    font-size: 1.5rem;
+  }
+
+  .student-details {
+    padding: 10px 20px 22px;
+    font-size: 1.1rem;
+  }
+}
